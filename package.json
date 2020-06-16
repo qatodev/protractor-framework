@@ -1,0 +1,28 @@
+{
+    "name": "ts-version",
+    "description": "",
+    "authors": "vvv",
+    "version": "1.0.0",
+    "scripts": {
+        "pretest": "rm -rf allure-report",
+        "test": "tsc && protractor conf.js",
+        "posttest": "allure generate allure-results --clean -o allure-report || true"
+    },
+    "dependencies": {
+        "@types/jasmine": "^3.5.10",
+        "@types/node": "^14.0.13",
+        "allure-commandline": "^2.13.0",
+        "jasmine-allure-reporter": "^1.0.2",
+        "jasmine-reporters": "^2.3.2",
+        "jasmine-spec-reporter": "^5.0.2",
+        "protractor": "^7.0.0",
+        "protractor-html-reporter-2": "^1.0.4",
+        "typescript": "^3.9.5"
+    },
+    "devDependencies": {
+        "@types/jasminewd2": "^2.0.8",
+        "jasmine": "^3.5.0",
+        "node": "^14.4.0",
+        "ts-node": "^8.10.2"
+    }
+}
