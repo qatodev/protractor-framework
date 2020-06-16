@@ -12,7 +12,12 @@ exports.config = {
   seleniumAddress: 'http://localhost:4444/wd/hub',
   specs: ['res/js_compiled_tests/itests/spec.js'],
   capabilities: {
-    browserName: 'chrome'
+    browserName: 'chrome',
+    // Uncomment to run the tests headless
+    // chromeOptions: {
+    //   //binary: process.env.CHROME_BIN,
+    //   args: ['--headless', '--no-sandbox']
+    //   }
   },
   onPrepare: function() {
     let jasmineReporters = require('jasmine-reporters');
@@ -38,7 +43,7 @@ exports.config = {
     let SpecReporter = require('jasmine-spec-reporter').SpecReporter;
     jasmine.getEnv().addReporter(new SpecReporter({
       spec: {
-        displayStacktrace: true
+        displayStacktrace: 'pretty'
       }
     }));
   }

@@ -3,3 +3,5 @@ package-lock.json
 
 res/js_compiled_tests
 res/testresults
+node_modules
+allure-report
